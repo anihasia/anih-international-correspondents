@@ -113,5 +113,4 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeProfile(); })
 
 loadData().catch(err=>{
   console.error(err);
-  document.querySelector('.map-note span').textContent='資料載入失敗，請確認透過 GitHub Pages 或網頁伺服器開啟。';
 });
