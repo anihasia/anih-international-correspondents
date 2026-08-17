@@ -32,8 +32,12 @@ function setText(id, value){
 
 function openProfile(person){
   document.getElementById('profileCountry').innerHTML = `${person.country_zh} <span>${person.country_en}</span>`;
-  document.getElementById('profilePhoto').src = person.photo;
-  document.getElementById('profilePhoto').alt = person.name_en;
+  const profilePhoto = document.getElementById('profilePhoto');
+  profilePhoto.src = person.photo;
+  profilePhoto.alt = person.name_en;
+  // Keep all uploaded portraits in the same circular frame.
+  // photo_position can be adjusted per person in correspondents.json, e.g. "center 30%".
+  profilePhoto.style.objectPosition = person.photo_position || 'center center';
   setText('profileNameZh', person.name_zh);
   setText('profileNameEn', person.nickname ? `${person.name_en} (${person.nickname})` : person.name_en);
   setText('profileTitleZh', person.title_zh);
