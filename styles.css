@@ -47,3 +47,30 @@ button,input{font:inherit} button{cursor:pointer} a{color:inherit;text-decoratio
 .resource-links{display:grid;gap:8px;padding:0 0 18px}
 .resource-links a{font-size:12px;color:var(--red);font-weight:700;border-top:1px solid var(--line);padding-top:12px}
 .resource-links a:hover{text-decoration:underline}
+
+
+/* Mobile hotspot fix: keep transparent profile targets clickable while the map scrolls. */
+#hotspotLayer{
+  position:absolute;
+  left:0;
+  top:0;
+  pointer-events:none;
+}
+#hotspotLayer .hotspot{
+  display:block;
+  pointer-events:auto;
+  min-width:44px;
+  min-height:44px;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+}
+.hotspot-label b{font-size:12px}
+.hotspot-label small{font-size:10px}
+
+@media (hover:none), (pointer:coarse){
+  .hotspot-label{display:none!important}
+}
+
+@media(max-width:900px){
+  .hotspot{display:block}
+}
