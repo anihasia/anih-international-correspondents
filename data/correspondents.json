@@ -116,5 +116,40 @@
       "google_maps": "https://maps.app.goo.gl/GZNpNmy5guZNKx7a6"
     },
     "photo_position": "center center"
+  },
+  {
+    "id": "zaw-lin-naing",
+    "country_zh": "緬甸",
+    "country_en": "Myanmar",
+    "name_zh": "",
+    "name_en": "Zaw Lin Naing",
+    "nickname": "",
+    "title_zh": "泰國法政大學設計學院博士生",
+    "title_en": "Ph.D. Student, Thammasat Design School, Thailand",
+    "organization_zh": "",
+    "organization_en": "",
+    "bio_zh": "關注文化遺產如何重新回到當代生活裡，長期以礦山聚落為實踐場域，透過社區參與、地方空間活化與文化策展，持續建立人、地方與文化遺產的當代連結，並透過文化實踐累積地方共同經驗，探索文化遺產在當代社會中的多元可能性。",
+    "bio_en": "Zaw Lin Naing is a civil and infrastructure engineer, urban planner and socio-economics specialist from Myanmar. He earned his bachelor’s degree from the Asian Institute of Technology and pursued M.Eng and M.UD at Thammasat University. Currently, he is a Ph.D. student at TDS, Thammasat University. He has contributed to major JICA and Japanese government-supported projects involving urban transport, railway development, transit-oriented development, smart cities and regional planning. His roles have included Deputy Team Leader, TOD and Station-area Development Expert and National Expert for Urban and Transport Planning. His research interests include socio-economic activities, land-use economics, tangible industrial heritage and railway infrastructure.",
+    "photo": "assets/zaw-lin-naing.jpg",
+    "map_hotspot": {
+      "left": 25.7,
+      "top": 49.1,
+      "size": 4.0
+    },
+    "heritage": {
+      "name_zh": "南渡－包德溫礦業遺址",
+      "name_en": "Namtu-Bawdwin Mining Heritage",
+      "country_zh": "緬甸",
+      "country_en": "Myanmar",
+      "location_zh": "南渡",
+      "location_en": "Namtu",
+      "type_zh": "礦業景觀・空間構成・鐵路基礎設施・產業聚落・文化資產保存",
+      "type_en": "Mining Landscape · Spatial Morphology · Railway Infrastructure · Industrial Settlement · Heritage Conservation",
+      "description_zh": "包德溫是緬甸最重要的歷史礦業地區之一，其礦產開採、鐵路基礎設施、工業設施與聚落發展，共同形成彼此緊密連結的空間系統。這裡並非單一、孤立的礦區，而是隨著採礦活動逐步發展出由採掘區、加工區、工場、倉儲空間、工人住宅、行政區域與運輸廊道所構成的完整產業網絡。鐵路在此一發展過程中扮演關鍵角色，不僅串聯包德溫的礦區與南渡的工業設施，也使整個礦業地區得以與更廣泛的區域交通及貿易網絡相互連結。",
+      "description_en": "Namtu–Bawdwin is one of Myanmar’s most important historic mining territories, where mineral extraction, railway infrastructure, industrial facilities and settlement growth developed as an interconnected spatial system. Rather than functioning as an isolated mine, the area evolved through a network of extraction sites, processing zones, workshops, storage areas, workers’ housing, administrative quarters and transport corridors. The railway was central to this development, linking Bawdwin’s mining areas with Namtu’s industrial facilities and connecting the mining district to wider regional transport and trade networks.",
+      "image": "assets/namtu-bawdwin.png",
+      "google_maps": "https://maps.app.goo.gl/ZL4abEAFqy4QdA6B7"
+    },
+    "photo_position": "center 28%"
   }
 ]
