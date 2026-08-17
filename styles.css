@@ -146,3 +146,63 @@ button,input{font:inherit} button{cursor:pointer} a{color:inherit;text-decoratio
   .interaction-text b{font-size:13px}
   .interaction-text small{font-size:10px}
 }
+
+/* v3 hero typography + wider copy + baseline-aligned interaction hint */
+@media(min-width:901px){
+  .hero-topline{
+    max-width:1480px;
+    margin:0 auto 18px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    column-gap:28px;
+    align-items:end;
+  }
+
+  .hero-topline .hero-copy{
+    max-width:none;
+    width:100%;
+    margin:0;
+  }
+
+  .hero-topline .lead{
+    max-width:none;
+    width:100%;
+  }
+
+  .interaction-hint{
+    align-self:end;
+    justify-self:end;
+    margin:0 0 2px;
+    padding:0;
+  }
+}
+
+/* Use a Western sans-serif for English copy so punctuation and apostrophes render naturally. */
+.hero h1 span,
+.lead span,
+.brand small,
+.plain-btn span,
+.outline-btn span,
+.filter span,
+.hotspot-label small,
+.name-en,
+.title-en,
+.org-block p:last-child,
+.section-kicker span,
+.body-en,
+.heritage-name-en,
+.meta-grid small,
+.recommendation h4 span,
+.map-link span,
+.directory-card small,
+.directory-note span,
+.interaction-text small{
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing:0;
+  word-spacing:normal;
+}
+
+/* Slightly tighter English hero copy for a cleaner bilingual block. */
+.lead span{
+  line-height:1.7;
+}
