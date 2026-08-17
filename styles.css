@@ -74,3 +74,73 @@ button,input{font:inherit} button{cursor:pointer} a{color:inherit;text-decoratio
 @media(max-width:900px){
   .hotspot{display:block}
 }
+
+/* Hero alignment + interactive portrait cue */
+.hero-topline{
+  max-width:1480px;
+  margin:0 auto 28px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:28px;
+  align-items:end;
+}
+.hero-topline .hero-copy{
+  max-width:930px;
+  margin:0;
+}
+.interaction-hint{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 0 10px;
+  color:var(--ink);
+  white-space:nowrap;
+}
+.tap-icon{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+}
+.tap-icon svg{width:100%;height:100%;overflow:visible}
+.tap-hand{
+  fill:none;
+  stroke:var(--red);
+  stroke-width:2.4;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.tap-wave{
+  fill:none;
+  stroke:var(--red);
+  transform-origin:25px 20px;
+  opacity:.38;
+}
+.tap-wave-inner{stroke-width:1.8;opacity:.42}
+.tap-wave-outer{stroke-width:1.4;opacity:.18}
+.interaction-text b,
+.interaction-text small{display:block}
+.interaction-text b{font-size:14px;letter-spacing:.02em}
+.interaction-text small{font-size:11px;color:var(--muted);margin-top:1px}
+
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .tap-wave-inner{animation:tapPulse 2.2s ease-out infinite}
+  .tap-wave-outer{animation:tapPulse 2.2s .3s ease-out infinite}
+  @keyframes tapPulse{
+    0%,45%{transform:scale(.72);opacity:.45}
+    75%,100%{transform:scale(1.28);opacity:0}
+  }
+}
+
+@media(max-width:900px){
+  .hero-topline{grid-template-columns:1fr;gap:14px;align-items:start}
+  .interaction-hint{padding:0 0 2px;justify-self:start}
+}
+
+@media(max-width:560px){
+  .hero-topline{margin-bottom:18px}
+  .tap-icon{width:40px;height:40px}
+  .interaction-text b{font-size:13px}
+  .interaction-text small{font-size:10px}
+}
