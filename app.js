@@ -1,46 +1,80 @@
 let correspondents = [];
 const drawer = document.getElementById('profileDrawer');
-const wuHotspot = document.getElementById('wuHotspot');
-const mapStage = document.getElementById('mapStage');
+const hotspotLayer = document.getElementById('hotspotLayer');
 
 async function loadData(){
   const response = await fetch('data/correspondents.json');
   correspondents = await response.json();
-  positionHotspot(correspondents[0]);
+  renderHotspots();
 }
 
-function positionHotspot(person){
-  if(!person?.map_hotspot) return;
-  const h = person.map_hotspot;
-  wuHotspot.style.left = h.left + '%';
-  wuHotspot.style.top = h.top + '%';
-  wuHotspot.style.width = h.size + '%';
+function renderHotspots(){
+  hotspotLayer.innerHTML = '';
+  correspondents.forEach(person => {
+    if(!person?.map_hotspot) return;
+    const h = person.map_hotspot;
+    const btn = document.createElement('button');
+    btn.className = 'hotspot';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', `開啟${person.name_zh} ${person.name_en} 的資料`);
+    btn.style.left = h.left + '%';
+    btn.style.top = h.top + '%';
+    btn.style.width = h.size + '%';
+    btn.innerHTML = `<span class="hotspot-label"><b>${person.name_zh}</b><small>${person.name_en}</small></span>`;
+    btn.addEventListener('click', () => openProfile(person));
+    hotspotLayer.appendChild(btn);
+  });
+}
+
+function setText(id, value){
+  document.getElementById(id).textContent = value || '';
 }
 
 function openProfile(person){
   document.getElementById('profileCountry').innerHTML = `${person.country_zh} <span>${person.country_en}</span>`;
   document.getElementById('profilePhoto').src = person.photo;
   document.getElementById('profilePhoto').alt = person.name_en;
-  document.getElementById('profileNameZh').textContent = person.name_zh;
-  document.getElementById('profileNameEn').textContent = person.nickname ? `${person.name_en} (${person.nickname})` : person.name_en;
-  document.getElementById('profileTitleZh').textContent = person.title_zh;
-  document.getElementById('profileTitleEn').textContent = person.title_en;
-  document.getElementById('profileOrgZh').textContent = person.organization_zh;
-  document.getElementById('profileOrgEn').textContent = person.organization_en;
-  document.getElementById('profileBioZh').textContent = person.bio_zh;
-  document.getElementById('profileBioEn').textContent = person.bio_en;
+  setText('profileNameZh', person.name_zh);
+  setText('profileNameEn', person.nickname ? `${person.name_en} (${person.nickname})` : person.name_en);
+  setText('profileTitleZh', person.title_zh);
+  setText('profileTitleEn', person.title_en);
+  setText('profileOrgZh', person.organization_zh);
+  setText('profileOrgEn', person.organization_en);
+
+  const aboutSection = document.getElementById('profileBioZh').closest('.content-section');
+  const hasBio = Boolean(person.bio_zh || person.bio_en);
+  aboutSection.hidden = !hasBio;
+  setText('profileBioZh', person.bio_zh);
+  setText('profileBioEn', person.bio_en);
 
   const h = person.heritage;
   document.getElementById('heritageImage').src = h.image;
   document.getElementById('heritageImage').alt = h.name_en;
-  document.getElementById('heritageNameZh').textContent = h.name_zh;
-  document.getElementById('heritageNameEn').textContent = h.name_en;
-  document.getElementById('heritageLocation').textContent = `${h.location_zh}・${h.country_zh} / ${h.location_en}, ${h.country_en}`;
-  document.getElementById('heritageType').textContent = `${h.type_zh} / ${h.type_en}`;
-  document.getElementById('heritageBy').textContent = `${person.name_zh} / ${person.name_en}`;
-  document.getElementById('heritageDescZh').textContent = h.description_zh;
-  document.getElementById('heritageDescEn').textContent = h.description_en;
+  setText('heritageNameZh', h.name_zh);
+  setText('heritageNameEn', h.name_en);
+  setText('heritageLocation', `${h.location_zh}・${h.country_zh} / ${h.location_en}, ${h.country_en}`);
+  setText('heritageType', `${h.type_zh} / ${h.type_en}`);
+  setText('heritageBy', `${person.name_zh} / ${person.name_en}`);
+  setText('heritageDescZh', h.description_zh);
+  setText('heritageDescEn', h.description_en);
   document.getElementById('heritageMapLink').href = h.google_maps;
+
+  const credit = document.getElementById('heritageImageCredit');
+  credit.hidden = !h.image_credit;
+  credit.textContent = h.image_credit || '';
+
+  const resources = document.getElementById('heritageResources');
+  resources.innerHTML = '';
+  const links = h.resources || [];
+  resources.hidden = links.length === 0;
+  links.forEach((r, idx) => {
+    const a = document.createElement('a');
+    a.href = r.url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = `${r.label_zh || `相關連結 ${idx+1}`} ${r.label_en ? '· ' + r.label_en : ''} ↗`;
+    resources.appendChild(a);
+  });
 
   drawer.classList.add('open');
   drawer.setAttribute('aria-hidden','false');
@@ -54,28 +88,8 @@ function closeProfile(){
   document.body.style.overflow='';
 }
 
-wuHotspot.addEventListener('click',()=>correspondents[0] && openProfile(correspondents[0]));
 document.querySelectorAll('[data-close-drawer]').forEach(el=>el.addEventListener('click',closeProfile));
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeProfile(); });
-
-document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
-  btn.classList.add('active');
-  const region=btn.dataset.region;
-  const active = region==='all' || region==='asia';
-  wuHotspot.style.opacity = active ? '1' : '.18';
-  wuHotspot.style.pointerEvents = active ? 'auto' : 'none';
-}));
-
-document.getElementById('searchInput').addEventListener('input',e=>{
-  const q=e.target.value.trim().toLowerCase();
-  const p=correspondents[0];
-  if(!q || !p){ mapStage.classList.remove('search-dim'); wuHotspot.classList.remove('is-match'); return; }
-  const hay=[p.name_zh,p.name_en,p.country_zh,p.country_en,p.organization_zh,p.organization_en,p.heritage.name_zh,p.heritage.name_en].join(' ').toLowerCase();
-  const match=hay.includes(q);
-  mapStage.classList.toggle('search-dim',!match);
-  wuHotspot.classList.toggle('is-match',match);
-});
 
 loadData().catch(err=>{
   console.error(err);

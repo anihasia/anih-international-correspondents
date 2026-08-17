@@ -32,5 +32,52 @@
       "image": "assets/alishan-forest-railway.jpg",
       "google_maps": "https://www.google.com/maps/search/?api=1&query=Alishan+Forest+Railway+Chiayi+Taiwan"
     }
+  },
+  {
+    "id": "chih-wen-lan",
+    "country_zh": "臺灣",
+    "country_en": "Taiwan",
+    "name_zh": "藍志玟",
+    "name_en": "Chih Wen Lan",
+    "nickname": "",
+    "title_zh": "助理教授",
+    "title_en": "Assistant Professor",
+    "organization_zh": "萬能科技大學",
+    "organization_en": "Vanung University",
+    "bio_zh": "",
+    "bio_en": "",
+    "photo": "assets/chih-wen-lan.jpg",
+    "map_hotspot": {
+      "left": 60.25,
+      "top": 13.85,
+      "size": 4.0
+    },
+    "heritage": {
+      "name_zh": "班堡大學 ERBA 校區",
+      "name_en": "University of Bamberg ERBA Campus",
+      "country_zh": "德國",
+      "country_en": "Germany",
+      "location_zh": "班堡",
+      "location_en": "Bamberg",
+      "type_zh": "工業遺產再利用・教育機構進駐・親水生態公園",
+      "type_en": "Adaptive Reuse · University Campus · Ecological Park",
+      "description_zh": "德國班堡ERBA棉紡廠創立於1858年，1993年停產荒廢後，藉2012年園藝展契機整體活化：舊廠房改建為大學校區與學生宿舍，部分建物轉為住宅，園區轉型為對外開放的ERBA Park，保留戲水遊戲場供親子使用。此案例展現工業遺址活化可結合教育、居住與休憩多重功能，成為與生活結合的文化遺產。",
+      "description_en": "The German ERBA cotton mill in Bamberg was founded in 1858 and fell into disuse after closing in 1993. The 2012 State Garden Show became the catalyst for its comprehensive revitalization: the former factory buildings were converted into a university campus and student dormitories, some structures became residential housing, and the grounds were transformed into the publicly accessible ERBA Park, which retains a water playground for families with children. This case demonstrates how industrial heritage can be reactivated to combine education, housing, and leisure—becoming cultural heritage woven into everyday life.",
+      "image": "assets/erba-campus.jpg",
+      "image_credit": "Photo: PeterBraun74, CC BY-SA 3.0, via Wikimedia Commons",
+      "google_maps": "https://maps.app.goo.gl/jJCJX6s5whRvL1ab9",
+      "resources": [
+        {
+          "label_zh": "班堡大學資料",
+          "label_en": "University of Bamberg",
+          "url": "https://www.uni-bamberg.de/fileadmin/kommunikation/045-UNI-PUBLIKATIONEN/uni.kat/uni.kat_SS12_web.pdf"
+        },
+        {
+          "label_zh": "ERBA 展覽資料",
+          "label_en": "ERBA Exhibition",
+          "url": "https://www.uni-bamberg.de/euroethno/forschung/projekte/abgeschlossene-drittmittelprojekte/erba-verwobene-geschichte/impressionen-der-erba-ausstellung/"
+        }
+      ]
+    }
   }
 ]

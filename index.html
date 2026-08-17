@@ -27,24 +27,9 @@
       </div>
 
       <div class="map-shell" aria-label="Interactive correspondent map">
-        <div class="map-toolbar">
-          <div class="filter-group" aria-label="Region filters">
-            <button class="filter active" data-region="all">全部 <span>All</span></button>
-            <button class="filter" data-region="asia">亞洲 <span>Asia</span></button>
-            <button class="filter" data-region="europe">歐洲 <span>Europe</span></button>
-            <button class="filter" data-region="americas">美洲 <span>Americas</span></button>
-            <button class="filter" data-region="oceania">大洋洲 <span>Oceania</span></button>
-          </div>
-          <div class="search-wrap">
-            <label class="sr-only" for="searchInput">搜尋</label>
-            <input id="searchInput" type="search" placeholder="搜尋通訊員或案例 / Search" />
-          </div>
-        </div>
         <div class="map-stage" id="mapStage">
           <img src="assets/correspondents-map.jpg" alt="ANIH 國際通訊聯絡員世界地圖" />
-          <button class="hotspot" id="wuHotspot" aria-label="開啟吳明翰 Ming-Han Wu 的資料">
-            <span class="hotspot-label"><b>吳明翰</b><small>Ming-Han Wu</small></span>
-          </button>
+          <div id="hotspotLayer" aria-label="Correspondent hotspots"></div>
         </div>
         <p class="map-note"><b>點選人物頭像探索</b><span>Select a correspondent to explore their story and recommended heritage.</span></p>
       </div>
@@ -87,6 +72,7 @@
             <img id="heritageImage" src="assets/alishan-forest-railway.jpg" alt="Alishan Forest Railway" />
             <span class="recommend-badge">RECOMMENDED HERITAGE</span>
           </div>
+          <p class="image-credit" id="heritageImageCredit" hidden></p>
           <div class="heritage-content">
             <p class="section-kicker">推薦工業遺產 <span>Recommended Industrial Heritage</span></p>
             <h3 id="heritageNameZh"></h3>
@@ -101,6 +87,7 @@
               <p class="body-zh" id="heritageDescZh"></p>
               <p class="body-en" id="heritageDescEn"></p>
             </div>
+            <div class="resource-links" id="heritageResources" hidden></div>
             <a class="map-link" id="heritageMapLink" href="#" target="_blank" rel="noopener">在 Google Maps 查看 <span>View on Google Maps ↗</span></a>
           </div>
         </section>
