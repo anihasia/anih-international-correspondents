@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ming-han-wu",
+    "country_zh": "臺灣",
+    "country_en": "Taiwan",
+    "name_zh": "吳明翰",
+    "name_en": "Ming-Han Wu",
+    "nickname": "Albert",
+    "title_zh": "副營運師級管理師",
+    "title_en": "Management Specialist",
+    "organization_zh": "阿里山林業鐵路及文化資產管理處",
+    "organization_en": "Alishan Forest Railway and Cultural Heritage Office",
+    "bio_zh": "吳明翰參與阿里山林業鐵路文化資產保存、營運管理及國際交流相關工作，關注林業鐵路作為產業文化資產，其保存、活化與當代社會之連結。",
+    "bio_en": "Ming-Han Wu is involved in the conservation, management and international exchange of the Alishan Forest Railway, with a particular interest in preserving industrial railway heritage and connecting it with contemporary society.",
+    "photo": "assets/ming-han-wu.jpg",
+    "map_hotspot": { "left": 61.3, "top": 20.9, "size": 4.2 },
+    "heritage": {
+      "name_zh": "阿里山林業鐵路",
+      "name_en": "Alishan Forest Railway",
+      "country_zh": "臺灣",
+      "country_en": "Taiwan",
+      "location_zh": "嘉義",
+      "location_en": "Chiayi",
+      "type_zh": "林業鐵路・產業文化資產",
+      "type_en": "Forest Railway · Industrial Heritage",
+      "description_zh": "阿里山林業鐵路是為開發森林資源而鋪設的產業鐵道，於1912年正式開通。其海拔由約30公尺爬升至2,216公尺，為克服險峻山勢，以順應地形的工程技術建造全山鐵道；其設立不僅帶動林業發展，也改變沿線聚落與都市紋理，並造就許多不同尺度的景觀。",
+      "description_en": "Opened in 1912, the Alishan Forest Railway was built for logging and climbs from about 30 to 2,216 meters. Its engineering responds to rugged mountain terrain. Beyond supporting forestry, the railway reshaped settlements and urban patterns along the route and created a distinctive cultural landscape.",
+      "image": "assets/alishan-forest-railway.jpg",
+      "google_maps": "https://www.google.com/maps/search/?api=1&query=Alishan+Forest+Railway+Chiayi+Taiwan"
+    }
+  }
+]

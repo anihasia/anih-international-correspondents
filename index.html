@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Asian Network of Industrial Heritage International Correspondents" />
+  <title>ANIH International Correspondents</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ANIH home">
+      <span class="brand-mark"></span>
+      <span>
+        <strong>Asian Network of Industrial Heritage</strong>
+        <small>亞洲產業文化資產資訊平臺</small>
+      </span>
+    </a>
+    <nav class="header-actions" aria-label="Page controls">
+      <button class="plain-btn" id="openDirectory">通訊員名錄 <span>Directory</span></button>
+      <a class="outline-btn" href="#mapSection">探索地圖 <span>Explore Map</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="mapSection">
+      <div class="hero-copy">
+        <p class="eyebrow">ANIH · INTERNATIONAL NETWORK</p>
+        <h1>國際通訊聯絡員<br><span>International Correspondents</span></h1>
+        <p class="lead">從世界各地的通訊員出發，認識工業遺產保存的在地視角與推薦案例。<br><span>Explore industrial heritage through local voices across the ANIH network.</span></p>
+      </div>
+
+      <div class="map-shell" aria-label="Interactive correspondent map">
+        <div class="map-toolbar">
+          <div class="filter-group" aria-label="Region filters">
+            <button class="filter active" data-region="all">全部 <span>All</span></button>
+            <button class="filter" data-region="asia">亞洲 <span>Asia</span></button>
+            <button class="filter" data-region="europe">歐洲 <span>Europe</span></button>
+            <button class="filter" data-region="americas">美洲 <span>Americas</span></button>
+            <button class="filter" data-region="oceania">大洋洲 <span>Oceania</span></button>
+          </div>
+          <div class="search-wrap">
+            <label class="sr-only" for="searchInput">搜尋</label>
+            <input id="searchInput" type="search" placeholder="搜尋通訊員或案例 / Search" />
+          </div>
+        </div>
+        <div class="map-stage" id="mapStage">
+          <img src="assets/correspondents-map.jpg" alt="ANIH 國際通訊聯絡員世界地圖" />
+          <button class="hotspot" id="wuHotspot" aria-label="開啟吳明翰 Ming-Han Wu 的資料">
+            <span class="pulse"></span>
+            <span class="hotspot-label"><b>吳明翰</b><small>Ming-Han Wu</small></span>
+          </button>
+        </div>
+        <p class="map-note"><b>點選人物頭像探索</b><span>Select a correspondent to explore their story and recommended heritage.</span></p>
+      </div>
+    </section>
+
+    <section class="concept-strip" aria-label="Website concept">
+      <div><b>01</b><span>人物節點<br><small>Correspondent</small></span></div>
+      <div><b>02</b><span>在地觀點<br><small>Local Voice</small></span></div>
+      <div><b>03</b><span>推薦案例<br><small>Recommended Heritage</small></span></div>
+      <div><b>04</b><span>全球連結<br><small>Global Network</small></span></div>
+    </section>
+  </main>
+
+  <aside class="drawer" id="profileDrawer" aria-hidden="true" aria-label="Correspondent profile">
+    <div class="drawer-backdrop" data-close-drawer></div>
+    <section class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="profileNameZh">
+      <button class="drawer-close" data-close-drawer aria-label="Close">×</button>
+      <div class="drawer-scroll">
+        <div class="profile-top">
+          <p class="country" id="profileCountry">臺灣 <span>Taiwan</span></p>
+          <img class="avatar" id="profilePhoto" src="assets/ming-han-wu.jpg" alt="Ming-Han Wu" />
+          <h2 id="profileNameZh">吳明翰</h2>
+          <p class="name-en" id="profileNameEn">Ming-Han Wu (Albert)</p>
+          <p class="title-zh" id="profileTitleZh"></p>
+          <p class="title-en" id="profileTitleEn"></p>
+          <div class="org-block">
+            <p id="profileOrgZh"></p>
+            <p id="profileOrgEn"></p>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <p class="section-kicker">ABOUT · 人物簡介</p>
+          <p class="body-zh" id="profileBioZh"></p>
+          <p class="body-en" id="profileBioEn"></p>
+        </section>
+
+        <section class="heritage-card">
+          <div class="heritage-image-wrap">
+            <img id="heritageImage" src="assets/alishan-forest-railway.jpg" alt="Alishan Forest Railway" />
+            <span class="recommend-badge">RECOMMENDED HERITAGE</span>
+          </div>
+          <div class="heritage-content">
+            <p class="section-kicker">推薦工業遺產 <span>Recommended Industrial Heritage</span></p>
+            <h3 id="heritageNameZh"></h3>
+            <p class="heritage-name-en" id="heritageNameEn"></p>
+            <div class="meta-grid">
+              <div><small>LOCATION · 地點</small><b id="heritageLocation"></b></div>
+              <div><small>TYPE · 類型</small><b id="heritageType"></b></div>
+              <div><small>RECOMMENDED BY</small><b id="heritageBy"></b></div>
+            </div>
+            <div class="recommendation">
+              <h4>推薦理由 <span>Recommendation</span></h4>
+              <p class="body-zh" id="heritageDescZh"></p>
+              <p class="body-en" id="heritageDescEn"></p>
+            </div>
+            <a class="map-link" id="heritageMapLink" href="#" target="_blank" rel="noopener">在 Google Maps 查看 <span>View on Google Maps ↗</span></a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </aside>
+
+  <aside class="directory" id="directory" aria-hidden="true">
+    <div class="directory-backdrop" data-close-directory></div>
+    <section class="directory-panel">
+      <div class="directory-head">
+        <div><p class="eyebrow">ANIH NETWORK</p><h2>通訊員名錄 <span>Directory</span></h2></div>
+        <button class="drawer-close" data-close-directory aria-label="Close">×</button>
+      </div>
+      <div class="directory-list" id="directoryList"></div>
+      <p class="directory-note">目前網站以吳明翰為示範資料；其餘通訊員可依相同 JSON 欄位逐筆加入。<br><span>This prototype contains one complete sample profile. Additional correspondents can be added through the same JSON structure.</span></p>
+    </section>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
