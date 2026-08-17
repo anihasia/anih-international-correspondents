@@ -1,10 +1,12 @@
 let correspondents = [];
 const drawer = document.getElementById('profileDrawer');
 const hotspotLayer = document.getElementById('hotspotLayer');
+const mapImage = document.querySelector('#mapStage > img');
 
 async function loadData(){
   const response = await fetch('data/correspondents.json');
   correspondents = await response.json();
+  syncHotspotLayer();
   renderHotspots();
 }
 
@@ -20,11 +22,25 @@ function renderHotspots(){
     btn.style.left = h.left + '%';
     btn.style.top = h.top + '%';
     btn.style.width = h.size + '%';
-    btn.innerHTML = `<span class="hotspot-label"><b>${person.name_zh}</b><small>${person.name_en}</small></span>`;
+    btn.innerHTML = `<span class="hotspot-label"><b>查看介紹</b><small>View profile</small></span>`;
     btn.addEventListener('click', () => openProfile(person));
     hotspotLayer.appendChild(btn);
   });
 }
+
+
+function syncHotspotLayer(){
+  if(!mapImage || !hotspotLayer) return;
+  const rect = mapImage.getBoundingClientRect();
+  hotspotLayer.style.width = rect.width + 'px';
+  hotspotLayer.style.height = rect.height + 'px';
+}
+
+if(mapImage){
+  if(mapImage.complete) syncHotspotLayer();
+  mapImage.addEventListener('load', syncHotspotLayer);
+}
+window.addEventListener('resize', syncHotspotLayer);
 
 function setText(id, value){
   document.getElementById(id).textContent = value || '';
