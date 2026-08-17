@@ -29,9 +29,10 @@
       "type_en": "Forest Railway · Industrial Heritage",
       "description_zh": "阿里山林業鐵路是為開發森林資源而鋪設的產業鐵道，於1912年正式開通。其海拔由約30公尺爬升至2,216公尺，為克服險峻山勢，以順應地形的工程技術建造全山鐵道；其設立不僅帶動林業發展，也改變沿線聚落與都市紋理，並造就許多不同尺度的景觀。",
       "description_en": "Opened in 1912, the Alishan Forest Railway was built for logging and climbs from about 30 to 2,216 meters. Its engineering responds to rugged mountain terrain. Beyond supporting forestry, the railway reshaped settlements and urban patterns along the route and created a distinctive cultural landscape.",
-      "image": "assets/alishan-forest-railway.jpeg",
+      "image": "assets/alishan-forest-railway.jpg",
       "google_maps": "https://www.google.com/maps/search/?api=1&query=Alishan+Forest+Railway+Chiayi+Taiwan"
-    }
+    },
+    "photo_position": "center center"
   },
   {
     "id": "chih-wen-lan",
@@ -65,7 +66,7 @@
       "description_en": "The German ERBA cotton mill in Bamberg was founded in 1858 and fell into disuse after closing in 1993. The 2012 State Garden Show became the catalyst for its comprehensive revitalization: the former factory buildings were converted into a university campus and student dormitories, some structures became residential housing, and the grounds were transformed into the publicly accessible ERBA Park, which retains a water playground for families with children. This case demonstrates how industrial heritage can be reactivated to combine education, housing, and leisure—becoming cultural heritage woven into everyday life.",
       "image": "assets/erba-campus.jpg",
       "image_credit": "Photo: PeterBraun74, CC BY-SA 3.0, via Wikimedia Commons",
-      "google_maps": "https://maps.app.goo.gl/wna9YMce8XWURUoU8",
+      "google_maps": "https://maps.app.goo.gl/jJCJX6s5whRvL1ab9",
       "resources": [
         {
           "label_zh": "班堡大學資料",
@@ -78,6 +79,42 @@
           "url": "https://www.uni-bamberg.de/euroethno/forschung/projekte/abgeschlossene-drittmittelprojekte/erba-verwobene-geschichte/impressionen-der-erba-ausstellung/"
         }
       ]
-    }
+    },
+    "photo_position": "center center"
+  },
+  {
+    "id": "tseng-yi-hsien",
+    "country_zh": "臺灣",
+    "country_en": "Taiwan",
+    "name_zh": "曾譯嫻",
+    "name_en": "TSENG, YI-HSIEN",
+    "nickname": "",
+    "title_zh": "九份金礦博物館館長 / 夢想山文化調進所共同創辦人",
+    "title_en": "Director, Jiufen Gold Ore Museum / Co-founder, Mountain of Dreams Culture Lab",
+    "organization_zh": "",
+    "organization_en": "",
+    "bio_zh": "關注文化遺產如何重新回到當代生活裡，長期以礦山聚落為實踐場域，透過社區參與、地方空間活化與文化策展，持續建立人、地方與文化遺產的當代連結，並透過文化實踐累積地方共同經驗，探索文化遺產在當代社會中的多元可能性。",
+    "bio_en": "Focused on reconnecting cultural heritage with contemporary life, with Jiufen as a place-based field of practice, through community engagement, adaptive reuse of local spaces, and cultural curation. Committed to building lasting connections between people, place, and heritage, fostering shared local experiences, and exploring the evolving possibilities of cultural heritage in contemporary society.",
+    "photo": "assets/tseng-yi-hsien.jpg",
+    "map_hotspot": {
+      "left": 78.6,
+      "top": 27.4,
+      "size": 4.0
+    },
+    "heritage": {
+      "name_zh": "九份",
+      "name_en": "Jiufen",
+      "country_zh": "臺灣",
+      "country_en": "Taiwan",
+      "location_zh": "九份",
+      "location_en": "Jiufen",
+      "type_zh": "礦業聚落・文化遺產活化・社區參與",
+      "type_en": "Mining Settlement · Heritage Revitalization · Community Engagement",
+      "description_zh": "以九份為實踐場域，透過「美代子理髮廳」的保存與活化，探討文化遺產如何重新回到當代生活，並分享文化策展、社區參與及地方空間活化的實踐經驗。此外，也將分享文化行動中的參與觀察與跨文化溝通經驗，探討不同文化背景的人們如何透過共同參與建立理解與連結，並思考文化遺產如何成為促進地方發展與文化交流的媒介。",
+      "description_en": "This presentation uses Jiufen as a place-based field of practice, with Miyoko's Barber Shop as a case study, to explore how cultural heritage can reconnect with contemporary life. It will share experiences in cultural curation, community engagement, and the adaptive reuse of local spaces. The presentation also examines participant observation and cross-cultural communication in cultural action, exploring how people from diverse cultural backgrounds build understanding and connections through participation, and how cultural heritage can serve as a bridge for local development, cultural exchange, and contemporary life.",
+      "image": "assets/jiufen.jpg",
+      "google_maps": "https://maps.app.goo.gl/GZNpNmy5guZNKx7a6"
+    },
+    "photo_position": "center center"
   }
 ]
