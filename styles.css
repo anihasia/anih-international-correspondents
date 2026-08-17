@@ -78,11 +78,11 @@ button,input{font:inherit} button{cursor:pointer} a{color:inherit;text-decoratio
 /* Hero alignment + interactive portrait cue */
 .hero-topline{
   max-width:1480px;
-  margin:0 auto 28px;
+  margin:0 auto 18px;
   display:grid;
-  grid-template-columns:minmax(0,1fr) auto;
-  gap:28px;
-  align-items:end;
+  grid-template-columns:minmax(0,1fr);
+  gap:12px;
+  align-items:start;
 }
 .hero-topline .hero-copy{
   max-width:930px;
@@ -95,6 +95,8 @@ button,input{font:inherit} button{cursor:pointer} a{color:inherit;text-decoratio
   padding:8px 0 10px;
   color:var(--ink);
   white-space:nowrap;
+  justify-self:end;
+  margin-top:0;
 }
 .tap-icon{
   width:46px;
@@ -134,7 +136,7 @@ button,input{font:inherit} button{cursor:pointer} a{color:inherit;text-decoratio
 }
 
 @media(max-width:900px){
-  .hero-topline{grid-template-columns:1fr;gap:14px;align-items:start}
+  .hero-topline{grid-template-columns:1fr;gap:12px;align-items:start}
   .interaction-hint{padding:0 0 2px;justify-self:start}
 }
 
