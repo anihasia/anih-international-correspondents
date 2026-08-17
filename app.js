@@ -1,13 +1,11 @@
 let correspondents = [];
 const drawer = document.getElementById('profileDrawer');
-const directory = document.getElementById('directory');
 const wuHotspot = document.getElementById('wuHotspot');
 const mapStage = document.getElementById('mapStage');
 
 async function loadData(){
   const response = await fetch('data/correspondents.json');
   correspondents = await response.json();
-  renderDirectory();
   positionHotspot(correspondents[0]);
 }
 
@@ -44,7 +42,6 @@ function openProfile(person){
   document.getElementById('heritageDescEn').textContent = h.description_en;
   document.getElementById('heritageMapLink').href = h.google_maps;
 
-  closeDirectory();
   drawer.classList.add('open');
   drawer.setAttribute('aria-hidden','false');
   document.body.style.overflow='hidden';
@@ -56,34 +53,10 @@ function closeProfile(){
   drawer.setAttribute('aria-hidden','true');
   document.body.style.overflow='';
 }
-function openDirectory(){
-  directory.classList.add('open');
-  directory.setAttribute('aria-hidden','false');
-  document.body.style.overflow='hidden';
-}
-function closeDirectory(){
-  directory.classList.remove('open');
-  directory.setAttribute('aria-hidden','true');
-  if(!drawer.classList.contains('open')) document.body.style.overflow='';
-}
-function renderDirectory(){
-  const root = document.getElementById('directoryList');
-  root.innerHTML='';
-  correspondents.forEach(person=>{
-    const btn=document.createElement('button');
-    btn.className='directory-card';
-    btn.innerHTML=`<img src="${person.photo}" alt=""><span><b>${person.name_zh} <small>${person.name_en}</small></b><small>${person.country_zh} · ${person.country_en}</small></span><em>→</em>`;
-    btn.addEventListener('click',()=>openProfile(person));
-    root.appendChild(btn);
-  });
-}
 
 wuHotspot.addEventListener('click',()=>correspondents[0] && openProfile(correspondents[0]));
 document.querySelectorAll('[data-close-drawer]').forEach(el=>el.addEventListener('click',closeProfile));
-document.querySelectorAll('[data-close-directory]').forEach(el=>el.addEventListener('click',closeDirectory));
-document.getElementById('openDirectory').addEventListener('click',openDirectory);
-
-document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeProfile(); closeDirectory(); }});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeProfile(); });
 
 document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));

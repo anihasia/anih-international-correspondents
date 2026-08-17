@@ -9,15 +9,11 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="ANIH home">
-      <span class="brand-mark"></span>
-      <span>
-        <strong>Asian Network of Industrial Heritage</strong>
-        <small>亞洲產業文化資產資訊平臺</small>
-      </span>
+    <a class="brand brand-logo" href="#top" aria-label="ANIH home">
+      <img src="assets/anih-logo.png" alt="Asian Network of Industrial Heritage 亞洲產業文化資產資訊平臺" />
     </a>
     <nav class="header-actions" aria-label="Page controls">
-      <button class="plain-btn" id="openDirectory">通訊員名錄 <span>Directory</span></button>
+      <a class="plain-btn official-site-btn" href="https://anih.culture.tw/index/zh-tw" target="_blank" rel="noopener">ANIH 官網 <span>Official Website ↗</span></a>
       <a class="outline-btn" href="#mapSection">探索地圖 <span>Explore Map</span></a>
     </nav>
   </header>
@@ -47,7 +43,6 @@
         <div class="map-stage" id="mapStage">
           <img src="assets/correspondents-map.jpg" alt="ANIH 國際通訊聯絡員世界地圖" />
           <button class="hotspot" id="wuHotspot" aria-label="開啟吳明翰 Ming-Han Wu 的資料">
-            <span class="pulse"></span>
             <span class="hotspot-label"><b>吳明翰</b><small>Ming-Han Wu</small></span>
           </button>
         </div>
@@ -113,17 +108,6 @@
     </section>
   </aside>
 
-  <aside class="directory" id="directory" aria-hidden="true">
-    <div class="directory-backdrop" data-close-directory></div>
-    <section class="directory-panel">
-      <div class="directory-head">
-        <div><p class="eyebrow">ANIH NETWORK</p><h2>通訊員名錄 <span>Directory</span></h2></div>
-        <button class="drawer-close" data-close-directory aria-label="Close">×</button>
-      </div>
-      <div class="directory-list" id="directoryList"></div>
-      <p class="directory-note">目前網站以吳明翰為示範資料；其餘通訊員可依相同 JSON 欄位逐筆加入。<br><span>This prototype contains one complete sample profile. Additional correspondents can be added through the same JSON structure.</span></p>
-    </section>
-  </aside>
 
   <script src="app.js"></script>
 </body>

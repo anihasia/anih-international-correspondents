@@ -13,7 +13,11 @@
     "bio_zh": "吳明翰參與阿里山林業鐵路文化資產保存、營運管理及國際交流相關工作，關注林業鐵路作為產業文化資產，其保存、活化與當代社會之連結。",
     "bio_en": "Ming-Han Wu is involved in the conservation, management and international exchange of the Alishan Forest Railway, with a particular interest in preserving industrial railway heritage and connecting it with contemporary society.",
     "photo": "assets/ming-han-wu.jpg",
-    "map_hotspot": { "left": 61.3, "top": 20.9, "size": 4.2 },
+    "map_hotspot": {
+      "left": 60.4,
+      "top": 20.9,
+      "size": 3.9
+    },
     "heritage": {
       "name_zh": "阿里山林業鐵路",
       "name_en": "Alishan Forest Railway",
