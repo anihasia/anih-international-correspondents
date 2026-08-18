@@ -91,7 +91,7 @@ function openProfile(person){
     const a = document.createElement('a');
     a.href = r.url;
     a.target = '_blank';
-    a.rel = 'noopener';
+    a.rel = 'noopener noreferrer';
     a.textContent = `${r.label_zh || `相關連結 ${idx+1}`} ${r.label_en ? '· ' + r.label_en : ''} ↗`;
     resources.appendChild(a);
   });
@@ -114,3 +114,58 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeProfile(); })
 loadData().catch(err=>{
   console.error(err);
 });
+
+/* =========================================================
+   MOBILE / EXTERNAL LINK SAFETY
+   Keep external destinations outside the current ANIH page.
+   Some mobile in-app browsers may ignore target="_blank";
+   this direct user-click handler provides a stronger fallback.
+   ========================================================= */
+function openExternalLinkSafely(event){
+  const link = event.target.closest('a[href]');
+  if(!link) return;
+
+  let url;
+  try {
+    url = new URL(link.href, window.location.href);
+  } catch(err) {
+    return;
+  }
+
+  const isWebLink = url.protocol === 'http:' || url.protocol === 'https:';
+  const isExternal = isWebLink && url.origin !== window.location.origin;
+  if(!isExternal) return;
+
+  // Preserve native modified-click behavior on desktop.
+  if(
+    event.button > 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey
+  ) return;
+
+  event.preventDefault();
+
+  // window.open is called directly inside the user's tap/click,
+  // which is the most reliable way to request a new tab/window on mobile.
+  const newContext = window.open(url.href, '_blank', 'noopener,noreferrer');
+
+  if(newContext){
+    try { newContext.opener = null; } catch(err) {}
+    return;
+  }
+
+  // Fallback for browsers that block window.open but still honor target=_blank.
+  const fallback = document.createElement('a');
+  fallback.href = url.href;
+  fallback.target = '_blank';
+  fallback.rel = 'noopener noreferrer';
+  fallback.style.display = 'none';
+  document.body.appendChild(fallback);
+  fallback.click();
+  fallback.remove();
+}
+
+document.addEventListener('click', openExternalLinkSafely);
+
