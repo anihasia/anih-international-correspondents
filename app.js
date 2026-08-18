@@ -116,27 +116,26 @@ loadData().catch(err=>{
 });
 
 /* =========================================================
-   MOBILE / EXTERNAL LINK SAFETY
-   Keep external destinations outside the current ANIH page.
-   Some mobile in-app browsers may ignore target="_blank";
-   this direct user-click handler provides a stronger fallback.
+   EXTERNAL LINKS — SINGLE OPEN
+   Each real user click/tap opens an external URL only once.
+   No synthetic fallback click is used.
    ========================================================= */
-function openExternalLinkSafely(event){
+document.addEventListener('click', function(event){
   const link = event.target.closest('a[href]');
   if(!link) return;
 
   let url;
   try {
     url = new URL(link.href, window.location.href);
-  } catch(err) {
+  } catch (err) {
     return;
   }
 
-  const isWebLink = url.protocol === 'http:' || url.protocol === 'https:';
-  const isExternal = isWebLink && url.origin !== window.location.origin;
+  const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
+  const isExternal = isHttp && url.origin !== window.location.origin;
   if(!isExternal) return;
 
-  // Preserve native modified-click behavior on desktop.
+  // Keep normal desktop modifier/middle-click behavior.
   if(
     event.button > 0 ||
     event.metaKey ||
@@ -146,26 +145,10 @@ function openExternalLinkSafely(event){
   ) return;
 
   event.preventDefault();
+  event.stopPropagation();
 
-  // window.open is called directly inside the user's tap/click,
-  // which is the most reliable way to request a new tab/window on mobile.
-  const newContext = window.open(url.href, '_blank', 'noopener,noreferrer');
-
-  if(newContext){
-    try { newContext.opener = null; } catch(err) {}
-    return;
+  const opened = window.open(url.href, '_blank', 'noopener,noreferrer');
+  if(opened){
+    try { opened.opener = null; } catch (err) {}
   }
-
-  // Fallback for browsers that block window.open but still honor target=_blank.
-  const fallback = document.createElement('a');
-  fallback.href = url.href;
-  fallback.target = '_blank';
-  fallback.rel = 'noopener noreferrer';
-  fallback.style.display = 'none';
-  document.body.appendChild(fallback);
-  fallback.click();
-  fallback.remove();
-}
-
-document.addEventListener('click', openExternalLinkSafely);
-
+}, false);
