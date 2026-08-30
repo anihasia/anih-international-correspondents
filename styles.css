@@ -206,3 +206,28 @@ button,input{font:inherit} button{cursor:pointer} a{color:inherit;text-decoratio
 .lead span{
   line-height:1.7;
 }
+
+/* =========================================================
+   HOTSPOT ACTUAL FIX — keep interactive layer above map
+   ========================================================= */
+.map-stage > img{
+  position:relative;
+  z-index:1;
+  display:block;
+}
+
+#hotspotLayer{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:10;
+  pointer-events:none;
+}
+
+#hotspotLayer .hotspot{
+  z-index:11;
+  display:block;
+  pointer-events:auto;
+  touch-action:manipulation;
+}
+
