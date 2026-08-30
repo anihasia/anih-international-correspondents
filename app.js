@@ -8,6 +8,7 @@ async function loadData(){
   correspondents = await response.json();
   syncHotspotLayer();
   renderHotspots();
+  requestAnimationFrame(syncHotspotLayer);
 }
 
 function renderHotspots(){
@@ -31,9 +32,14 @@ function renderHotspots(){
 
 function syncHotspotLayer(){
   if(!mapImage || !hotspotLayer) return;
-  const rect = mapImage.getBoundingClientRect();
-  hotspotLayer.style.width = rect.width + 'px';
-  hotspotLayer.style.height = rect.height + 'px';
+
+  // Match the hotspot layer to the map image itself, including the wide
+  // scrollable mobile layout. Using offsetWidth/offsetHeight keeps the
+  // coordinate system aligned with the actual image pixels.
+  hotspotLayer.style.left = mapImage.offsetLeft + 'px';
+  hotspotLayer.style.top = mapImage.offsetTop + 'px';
+  hotspotLayer.style.width = mapImage.offsetWidth + 'px';
+  hotspotLayer.style.height = mapImage.offsetHeight + 'px';
 }
 
 if(mapImage){
