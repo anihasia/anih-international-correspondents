@@ -14,9 +14,9 @@
     "bio_en": "Ming-Han Wu is involved in the conservation, management and international exchange of the Alishan Forest Railway, with a particular interest in preserving industrial railway heritage and connecting it with contemporary society.",
     "photo": "assets/ming-han-wu.jpg",
     "map_hotspot": {
-      "left": 60.48,
-      "top": 24.1,
-      "size": 3.9
+      "left": 60.64,
+      "top": 31.26,
+      "size": 4.6
     },
     "heritage": {
       "name_zh": "阿里山林業鐵路",
@@ -49,9 +49,9 @@
     "bio_en": "",
     "photo": "assets/chih-wen-lan.jpg",
     "map_hotspot": {
-      "left": 60.48,
-      "top": 16.78,
-      "size": 4.0
+      "left": 60.64,
+      "top": 24.1,
+      "size": 4.6
     },
     "heritage": {
       "name_zh": "班堡大學 ERBA 校區",
@@ -85,9 +85,9 @@
     "bio_en": "Focused on reconnecting cultural heritage with contemporary life, with Jiufen as a place-based field of practice, through community engagement, adaptive reuse of local spaces, and cultural curation. Committed to building lasting connections between people, place, and heritage, fostering shared local experiences, and exploring the evolving possibilities of cultural heritage in contemporary society.",
     "photo": "assets/tseng-yi-hsien.jpg",
     "map_hotspot": {
-      "left": 73.71,
-      "top": 38.52,
-      "size": 4.0
+      "left": 74.1,
+      "top": 38.9,
+      "size": 4.6
     },
     "heritage": {
       "name_zh": "九份",
@@ -120,9 +120,9 @@
     "bio_en": "Zaw Lin Naing is a civil and infrastructure engineer, urban planner and socio-economics specialist from Myanmar. He earned his bachelor’s degree from the Asian Institute of Technology and pursued M.Eng and M.UD at Thammasat University. Currently, he is a Ph.D. student at TDS, Thammasat University. He has contributed to major JICA and Japanese government-supported projects involving urban transport, railway development, transit-oriented development, smart cities and regional planning. His roles have included Deputy Team Leader, TOD and Station-area Development Expert and National Expert for Urban and Transport Planning. His research interests include socio-economic activities, land-use economics, tangible industrial heritage and railway infrastructure.",
     "photo": "assets/zaw-lin-naing.jpg",
     "map_hotspot": {
-      "left": 26.26,
-      "top": 49.98,
-      "size": 4.0
+      "left": 26.2,
+      "top": 50.2,
+      "size": 4.6
     },
     "heritage": {
       "name_zh": "南渡－包德溫礦業遺址",
