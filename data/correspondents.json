@@ -14,9 +14,9 @@
     "bio_en": "Ming-Han Wu is involved in the conservation, management and international exchange of the Alishan Forest Railway, with a particular interest in preserving industrial railway heritage and connecting it with contemporary society.",
     "photo": "assets/ming-han-wu.jpg",
     "map_hotspot": {
-      "left": 60.64,
-      "top": 31.26,
-      "size": 4.6
+      "left": 60.48,
+      "top": 24.1,
+      "size": 3.9
     },
     "heritage": {
       "name_zh": "阿里山林業鐵路",
@@ -49,9 +49,9 @@
     "bio_en": "",
     "photo": "assets/chih-wen-lan.jpg",
     "map_hotspot": {
-      "left": 60.64,
-      "top": 24.1,
-      "size": 4.6
+      "left": 60.48,
+      "top": 16.78,
+      "size": 4.0
     },
     "heritage": {
       "name_zh": "班堡大學 ERBA 校區",
@@ -85,9 +85,9 @@
     "bio_en": "Focused on reconnecting cultural heritage with contemporary life, with Jiufen as a place-based field of practice, through community engagement, adaptive reuse of local spaces, and cultural curation. Committed to building lasting connections between people, place, and heritage, fostering shared local experiences, and exploring the evolving possibilities of cultural heritage in contemporary society.",
     "photo": "assets/tseng-yi-hsien.jpg",
     "map_hotspot": {
-      "left": 74.1,
-      "top": 38.9,
-      "size": 4.6
+      "left": 73.71,
+      "top": 38.52,
+      "size": 4.0
     },
     "heritage": {
       "name_zh": "九份",
@@ -120,9 +120,9 @@
     "bio_en": "Zaw Lin Naing is a civil and infrastructure engineer, urban planner and socio-economics specialist from Myanmar. He earned his bachelor’s degree from the Asian Institute of Technology and pursued M.Eng and M.UD at Thammasat University. Currently, he is a Ph.D. student at TDS, Thammasat University. He has contributed to major JICA and Japanese government-supported projects involving urban transport, railway development, transit-oriented development, smart cities and regional planning. His roles have included Deputy Team Leader, TOD and Station-area Development Expert and National Expert for Urban and Transport Planning. His research interests include socio-economic activities, land-use economics, tangible industrial heritage and railway infrastructure.",
     "photo": "assets/zaw-lin-naing.jpg",
     "map_hotspot": {
-      "left": 26.2,
-      "top": 50.2,
-      "size": 4.6
+      "left": 26.26,
+      "top": 49.98,
+      "size": 4.0
     },
     "heritage": {
       "name_zh": "南渡－包德溫礦業遺址",
@@ -139,5 +139,125 @@
       "google_maps": "https://maps.app.goo.gl/ZL4abEAFqy4QdA6B7"
     },
     "photo_position": "center 28%"
+  },
+  {
+    "id": "hsiao-wen-huang",
+    "country_zh": "臺灣",
+    "country_en": "Taiwan",
+    "name_zh": "黃小聞",
+    "name_en": "Hsiao-wen Huang",
+    "nickname": "Serena",
+    "title_zh": "遺產研究博士生/英國約克大學考古學院",
+    "title_en": "PhD student of Heritage Study, Department of Archaeology, University of York",
+    "organization_zh": "",
+    "organization_en": "",
+    "bio_zh": "目前為英國約克大學遺產研究（Heritage Studies）博士生，研究領域涵蓋文化資產治理、文化公民權、公眾參與、都市遺產治理及文化政策，關注文化資產保存與都市轉型過程中的治理機制，以及不同利害關係人在文化資產治理中的角色與互動。曾任文化資產及博物館展示專案管理，具文化資產調查、策展規劃、展示詮釋及文化政策研究經驗。曾於多項國際學術研討會發表，並積極參與國際文化資產學術社群，現擔任亞洲工業遺產網絡（ANIH）臺灣區通訊代表，並為國際工業遺產保存委員會（TICCIH）青年會員、國際區域博物館委員會（ICR）會員及中華民國博物館學會（TMA）會員，持續推動文化資產治理、文化政策與公眾參與相關研究，促進臺灣與國際文化資產學術交流。",
+    "bio_en": "Hsiao-Wen Huang is a PhD student in Heritage Studies at the University of York. Her research focuses on heritage governance, cultural citizenship, public participation, urban heritage, and cultural policy, with particular interests in stakeholder participation in heritage conservation and urban transformation. She has professional experience in heritage and museum exhibition projects, cultural study, and cultural policy research.\nShe currently serves as Regional Correspondent for Taiwan at the Asian Network of Industrial Heritage (ANIH) and is a Young Member of The International Committee for the Conservation of the Industrial Heritage (TICCIH). She is also a member of the International Committee for Regional Museums (ICR) and the Taiwan Museum Association (TMA). Her work aims to foster dialogue between heritage research and practice in Taiwan and internationally.",
+    "photo": "assets/hsiao-wen-huang-profile.jpg",
+    "map_hotspot": {
+      "left": 71.25,
+      "top": 36.9,
+      "size": 4.6
+    },
+    "heritage": {
+      "name_zh": "日本海軍第六燃料廠新竹支廠",
+      "name_en": "Hsinchu the Sixth Fuel Factory",
+      "country_zh": "臺灣",
+      "country_en": "Taiwan",
+      "location_zh": "新竹",
+      "location_en": "Hsinchu",
+      "type_zh": "新竹六燃、大煙囪下的家、日本工業遺址、文化資產活化",
+      "type_en": "Hsinchu the Sixth Fuel Factory, Home under the Big Chimney, Japanese Industrial Heritage, Heritage Revitalization",
+      "description_zh": "新竹六燃是臺灣重要的戰時工業遺址，見證第二次世界大戰期間日本於臺灣推動軍需工業與航空燃料生產的歷史，也承載戰後產業轉型、眷舍生活與城市發展的多重記憶。近年在國立陽明交通大學團隊長期投入下，透過歷史研究、文化資產保存、地方協作、生態調查與藝術實踐等多元方式，持續梳理六燃豐富的文化內涵，並串聯校園、社區與城市，使工業遺產不僅成為保存與研究的對象，更逐步發展為地方知識生產、公共參與及文化交流的重要場域。",
+      "description_en": "Hsinchu the Sixth Fuel Factory is a significant wartime industrial heritage site in Taiwan, bearing witness to Japan’s development of military industries and aviation fuel production in Taiwan during the Second World War. It also embodies layers of post-war industrial transformation, military-dependent community life, and urban development. Through the long-term commitment of the National Yang Ming Chiao Tung University (NYCU) team, the site has been revitalised through historical research, heritage conservation, community collaboration, ecological studies, and artistic practices. These sustained efforts have connected the university, local communities, and the wider city, transforming the site into an important platform for local knowledge production, public participation, and cultural exchange.",
+      "image": "assets/hsiao-wen-huang-heritage.jpg",
+      "google_maps": "https://maps.app.goo.gl/waemjELtJcaw3uAN8",
+      "resources": [
+        {
+          "label_zh": "參考資料",
+          "label_en": "Reference",
+          "url": "https://sixthfflocalogy.web.nycu.edu.tw/"
+        }
+      ]
+    },
+    "photo_position": "center center"
+  },
+  {
+    "id": "lin-xiao-yu",
+    "country_zh": "臺灣",
+    "country_en": "Taiwan",
+    "name_zh": "林小渝",
+    "name_en": "Lin Xiao Yu",
+    "nickname": "Yvonne",
+    "title_zh": "雄本老屋規劃有限公司/台北規劃部三部/主任",
+    "title_en": "X-Basic Planning/Planning Department Group 3/Director",
+    "organization_zh": "",
+    "organization_en": "",
+    "bio_zh": "曾在「臺北機廠」做工作報告書，記錄與研究國定古蹟修復過程，現任於雄本老屋從事文化資產相關作業，如現況調查、初步建物調查及測繪紀錄，以及都市更新場館營運。",
+    "bio_en": "Previously working on restoration work report for the Taipei Railway Workshop to document the process of the restoration. Currently, working at X-Basic Planning, engaging in cultural heritage operations—including basic architectural investigation, and surveying and mapping—as well as the operation and management of Taipei Urban Regeneration idea hub.",
+    "photo": "assets/lin-xiao-yu-profile.jpg",
+    "map_hotspot": {
+      "left": 71.25,
+      "top": 23.1,
+      "size": 4.6
+    },
+    "heritage": {
+      "name_zh": "國家鐵道博物館",
+      "name_en": "National Railway Museum",
+      "country_zh": "臺灣",
+      "country_en": "Taiwan",
+      "location_zh": "臺北市",
+      "location_en": "Taipei",
+      "type_zh": "鐵道文化資產・產業文化資產",
+      "type_en": "Railway cultural heritage・Industrial Heritage",
+      "description_zh": "「國家鐵道博物館」前身為創立於1935年的「臺北機廠」，這裡曾是臺灣鐵路歷史最悠久、規模最大的車輛修護基地，現已轉型為活化保存鐵道文化資產的國家級博物館，展出多款珍貴的經典列車與歷史建築。",
+      "description_en": "The National Railway Museum, located in the Xinyi District of Taipei City, was formerly the Taipei Railway Workshop established in 1935. Once the oldest and largest rolling stock maintenance depot in Taiwan, it has been transformed into a national-level museum dedicated to preserving and revitalizing railway cultural heritage, featuring classic historical trains and heritage buildings.",
+      "image": "assets/lin-xiao-yu-heritage.jpg",
+      "google_maps": "https://maps.app.goo.gl/kQbB8mBDj2SynX7L8",
+      "resources": [
+        {
+          "label_zh": "參考資料",
+          "label_en": "Reference",
+          "url": "https://www.nrm.gov.tw/"
+        }
+      ]
+    },
+    "photo_position": "center center"
+  },
+  {
+    "id": "leeyini",
+    "country_zh": "台灣",
+    "country_en": "TW",
+    "name_zh": "李依倪",
+    "name_en": "LEEYINI",
+    "nickname": "",
+    "title_zh": "創辦人/文化保溫瓶工作室",
+    "title_en": "",
+    "organization_zh": "",
+    "organization_en": "",
+    "bio_zh": "於2019年開始投入台灣新北猴硐地區礦工記憶保存、文化應用，以及2014年投入雲林虎尾建國眷村聚落保存，期待文化保存創造未來文化應用，讓文化成為一種生活的可能性。\n\n礦業部分目前投入包含台灣礦工坑內畫、礦業勞動用語記錄協助、猴硐礦工文史館經營；眷村聚落保存部分包含日軍遺址與研究調查、聚落保存修繕與活化。",
+    "bio_en": "Since 2019, I have been dedicated to preserving miners’ memories and developing cultural initiatives in Houtong, New Taipei City, Taiwan. My work in mining heritage includes documenting underground drawings created by Taiwanese miners, assisting with the documentation of mining-related labor terminology, and operating the Houtong Miner Culture and History Museum.\n\nSince 2014, I have also been involved in the preservation of the Huwei Jianguo Military Dependents’ Village in Yunlin. My work focuses on the research and documentation of Japanese military heritage sites, as well as the conservation, restoration, and adaptive reuse of the historic settlement.\n\nThrough these efforts, I hope to connect cultural preservation with future cultural practices, allowing heritage to remain relevant to contemporary society and making culture a living part of everyday life.",
+    "photo": "assets/leeyini-profile.jpg",
+    "map_hotspot": {
+      "left": 84.55,
+      "top": 23.1,
+      "size": 4.6
+    },
+    "heritage": {
+      "name_zh": "猴硐礦工文史館",
+      "name_en": "Houtong Miners’ Museum",
+      "country_zh": "台灣",
+      "country_en": "Taiwan",
+      "location_zh": "新北市猴硐地區",
+      "location_en": "Houtong,New Taipei City",
+      "type_zh": "礦場文化、礦工、煤炭地景、礦工記憶保存",
+      "type_en": "Mining Heritage · Miners · Coal-Mining Landscapes · Preservation of Miners’ Memories",
+      "description_zh": "猴硐為台灣過去最大的煤礦場之一，目前猴硐地區仍留有大量豐富的礦業遺產，猴硐礦工文史館由一群台灣的末代礦工所創立，仍然用著自己珍貴的生命經驗帶著大家認識台灣的煤礦。",
+      "description_en": "Houtong was once one of Taiwan’s largest coal-mining areas and remains home to a rich collection of mining heritage sites today. The Houtong Miners’ Culture and History Museum was founded by a group of Taiwan’s last generation of coal miners, who continue to share their invaluable life experiences and firsthand memories, guiding visitors to discover and understand the history of coal mining in Taiwan.",
+      "image": "assets/leeyini-heritage.jpg",
+      "google_maps": "https://maps.app.goo.gl/tv6egd5qycGBY2fD7?g_st=ac",
+      "image_credit": "YINI LEE/YINI LEE"
+    },
+    "photo_position": "center center"
   }
 ]
